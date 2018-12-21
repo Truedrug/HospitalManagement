@@ -1,0 +1,33 @@
+<div style="padding: 10px;">
+  <div style="background: grey;padding: 5px 0px">Hospital List</div>
+  <button
+    style="background: green; border-radius: 2px; padding: 3px 12px; color: #fff;"
+    (click)="sortByHospitalName()"
+  >
+    Sort by Hospital Name
+  </button>
+  <table>
+    <thead>
+      <tr>
+        <td>Department Name</td>
+        <td>Contact Number</td>
+        <td>View Department</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hospital of hospitalDetails">
+        <td>{{ hospital.hospitalname }}</td>
+        <td>{{ hospital.contactnumber }}</td>
+        <td>
+          <button
+            style="color: blue;"
+            routerLink="/department"
+            (click)="onHospitalClick(hospital.hospitalname)"
+          >
+            View
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

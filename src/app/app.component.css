@@ -1,0 +1,14 @@
+.header {
+  font-weight: bold;
+  text-align: center;
+  background: lightblue;
+  padding: 15px;
+  font-size: 18px;
+}
+.footer {
+  font-weight: bold;
+  text-align: center;
+  background: lightblue;
+  padding: 15px;
+  font-size: 18px;
+}

@@ -1,0 +1,30 @@
+<div style="padding: 10px;">
+  <div style="background: grey;padding: 5px 0px">Department List</div>
+  <button
+    style="background: green; border-radius: 2px; padding: 3px 12px; color: #fff;"
+  >
+    Sort by Department Name
+  </button>
+  <button
+    style="background: green; border-radius: 2px; padding: 3px 5px; color: #fff;"
+    routerLink="/hospital"
+  >
+    Back
+  </button>
+  <table>
+    <thead>
+      <tr>
+        <td>Department Name</td>
+        <td>Head of Department</td>
+        <td>Contact Number</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let department of departmentDetails">
+        <td>{{ department.departmentname }}</td>
+        <td>{{ department.head }}</td>
+        <td>{{ department.contactnumber }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
